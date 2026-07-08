@@ -3,10 +3,4 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "20"
-
-# Single-page app: mọi route đều trả về index.html
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  NODE_VERSION = "22"
