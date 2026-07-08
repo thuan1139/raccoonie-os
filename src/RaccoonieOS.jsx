@@ -4,7 +4,7 @@ import {
   CartesianGrid, PieChart, Pie, Cell, Legend, AreaChart, Area, RadialBarChart, RadialBar,
 } from "recharts";
 import {
-  LayoutDashboard, Calendar, BookOpen, Megaphone, Package, Film, Kanban,
+  LayoutDashboard, Calendar, BookOpen, Megaphone, Package, Film, Kanban as KanbanIcon,
   BarChart3, Sparkles, Settings, Plus, X, ChevronDown, ChevronRight, TrendingUp,
   TrendingDown, AlertTriangle, Lightbulb, Target, Zap, Search, Bell, Send,
   ArrowRight, ShoppingCart, Users, Flame, Star, Clock, CheckCircle2, Circle,
@@ -224,7 +224,7 @@ const NAV = [
   { id: "campaign", label: "Campaign Workspace", icon: Megaphone },
   { id: "product", label: "Product Pipeline", icon: Package },
   { id: "creative", label: "Creative Pipeline", icon: Film },
-  { id: "tasks", label: "Task Board", icon: Kanban },
+  { id: "tasks", label: "Task Board", icon: KanbanIcon },
   { id: "analytics", label: "Analytics", icon: BarChart3 },
   { id: "knowledge", label: "AI Copilot", icon: Sparkles },
   { id: "settings", label: "Settings", icon: Settings },
@@ -806,7 +806,7 @@ function CampaignWorkspace() {
               <div className="mt-3"><Progress value={pct(cp.currentGMV, cp.targetGMV)} color={cp.status === "At Risk" ? "#ef4444" : INDIGO} /></div>
               <div className="mt-3 flex items-center gap-3 text-xs text-slate-400">
                 <span className="flex items-center gap-1"><Layers size={12} /> {projCount} projects</span>
-                <span className="flex items-center gap-1"><Kanban size={12} /> {taskCount} tasks</span>
+                <span className="flex items-center gap-1"><KanbanIcon size={12} /> {taskCount} tasks</span>
               </div>
             </Card>
           );
